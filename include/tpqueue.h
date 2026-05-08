@@ -11,7 +11,7 @@ class TPQueue {
     explicit Node(const T& value) : data(value), next(nullptr) {}
   };
 
-Node* head;
+  Node* head;
   int count;
 
  public:
@@ -23,7 +23,7 @@ Node* head;
       head = head->next;
       delete temp;
     }
-}
+  }
 
   void push(const T& item) {
     Node* newNode = new Node(item);
@@ -40,7 +40,7 @@ Node* head;
       newNode->next = current->next;
       current->next = newNode;
     }
-   count++;
+    count++;
   }
 
   T pop() {
